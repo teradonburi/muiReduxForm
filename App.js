@@ -199,7 +199,7 @@ const renderFile = withStyles(() => ({
       />
       <label htmlFor={name}>
         <Button classes={{root: classes.button}} variant='outlined' component='span'>
-          {buttonLabel || 'アップロード'}
+          {buttonLabel || 'ファイルを選択'}
         </Button>
       </label>
       <label>{value && value.name}</label>
