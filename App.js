@@ -318,7 +318,7 @@ const renderMembers = withStyles(theme => ({
 })
 @connect(
   state => ({
-    user: state.user.user,
+    send: state.user.user,
   }),
   { create }
 )
@@ -329,16 +329,9 @@ const renderMembers = withStyles(theme => ({
   },
 }))
 export default class MainPage extends React.Component {
-  state = {
-    send: null,
-  }
 
   constructor(props) {
     super(props)
-    this.state = {
-      images: [],
-      uploading: {},
-    }
     this.props.initialize({text: 'てきすと'})
   }
 
@@ -357,8 +350,7 @@ export default class MainPage extends React.Component {
   }
 
   render () {
-    const { classes, handleSubmit } = this.props
-    const { send } = this.state
+    const { classes, handleSubmit, send } = this.props
 
     return (
       <form onSubmit={handleSubmit(this.submit)} encType='multipart/form-data'>
