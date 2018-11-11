@@ -114,7 +114,7 @@ const renderRadio = ({
   </FormControl>
 )
 
-// CheckButton
+// CheckBox
 const renderCheckBox = ({
   input: { value, onChange },
   label,
@@ -163,6 +163,7 @@ const renderSwitch = ({
   />
 )
 
+// File
 const renderFile = withStyles(() => ({
   input: {
     display: 'none',
@@ -207,6 +208,7 @@ const renderFile = withStyles(() => ({
   )
 )
 
+// Dynamic Items
 const renderMembers = withStyles(theme => ({
   input: {
     display: 'flex',
